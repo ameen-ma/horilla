@@ -1,5 +1,6 @@
 package horilla.TestObjects;
 
+import horilla.abstracts.AbstractComponents;
 import horilla.pageObjects.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,6 +17,7 @@ public class BaseTest {
 
     public WebDriver driver;
     public LoginPage loginPage;
+    public AbstractComponents abstractComponents;
 
     public WebDriver initializeDriver() throws IOException {
 
@@ -40,6 +42,8 @@ public class BaseTest {
 
     driver=initializeDriver();
     loginPage = new LoginPage(driver);
+    abstractComponents = new AbstractComponents(driver);
+
     loginPage.goTo();
     return loginPage ;
 
@@ -47,7 +51,7 @@ public class BaseTest {
 
     @AfterMethod(alwaysRun = true)
     public void endRun(){
-        driver.quit();
+        //driver.quit();
     }
 
 }
