@@ -20,13 +20,13 @@ public class AbstractComponents {
     this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
     }
-@FindBy(css = "button[hx-get=\"/attendance/clock-in\"]")
+@FindBy(css = "//button[contains(@class, 'oh-btn--success-outline')]")
     WebElement checkIn;
 @FindBy(xpath = "//div[@id=\"attendance-activity-container\"]")
     WebElement log;
 
     public String attendanceCheckIn(){
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@id=\"attendance-activity-container\"]")));
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[contains(@class, 'oh-btn--success-outline')]")));
 
         wait.until(ExpectedConditions.elementToBeClickable(checkIn)).click();
         //checkIn.click();
