@@ -20,16 +20,24 @@ public class AbstractComponents {
     this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
     }
-@FindBy(css = "//button[contains(@class, 'oh-btn--success-outline')]")
-    WebElement checkIn;
+
+/*@FindBy(css = "//button[contains(@class, 'oh-btn--success-outline')]")
+    WebElement checkIn; */
 @FindBy(xpath = "//div[@id=\"attendance-activity-container\"]")
     WebElement log;
+@FindBy(xpath = "//button[@class=\"oh-btn oh-btn--success-outline mr-2\"]")
+    WebElement checkIn;
+    //button[hx-get="/attendance/clock-in"]
 
-    public String attendanceCheckIn(){
-        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[contains(@class, 'oh-btn--success-outline')]")));
 
-        wait.until(ExpectedConditions.elementToBeClickable(checkIn)).click();
-        //checkIn.click();
+
+    public String attendanceCheckIn() throws InterruptedException {
+        Thread.sleep(5000);
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//button[@class=\"oh-btn oh-btn--success-outline mr-2\"]")));
+
+
+       // wait.until(ExpectedConditions.elementToBeClickable(checkIn)).click();
+        checkIn.click();
         String attendenceText=log.getText();
         return attendenceText;
     }

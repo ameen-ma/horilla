@@ -22,7 +22,7 @@ public class BaseTest {
     public WebDriver initializeDriver() throws IOException {
 
         Properties properties = new Properties();
-        FileInputStream fis = new FileInputStream("C:\\Users\\alame\\IdeaProjects\\untitled3\\src\\main\\java\\horilla\\resources\\GlobalDataProperties");
+        FileInputStream fis = new FileInputStream("C:\\Users\\ameen.ma\\OneDrive - PITSOLUTIONS\\Ameen_Projects\\Selenium\\horilla\\src\\main\\java\\horilla\\resources\\GlobalDataProperties");
         properties.load(fis);
         String browserName = properties.getProperty("browser");
 

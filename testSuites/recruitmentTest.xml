@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite"><test verbose="2" preserve-order="true" name="C:/Users/ameen.ma/OneDrive - PITSOLUTIONS/Ameen_Projects/Selenium/horilla/src/test">
+    <classes>
+        <class name="horilla.tests.LoginTest">
+            <methods><include name="loginHorilla"/>
+        </methods>
+        </class></classes></test></suite>

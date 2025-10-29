@@ -1,34 +1,30 @@
 package horilla.tests;
 
 import horilla.TestObjects.BaseTest;
-import horilla.pageObjects.LoginPage;
+import horilla.pageObjects.Recruitment;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class LoginTest extends BaseTest {
+public class NewRecruitment extends BaseTest {
 
 
 
 
 @Test
-    public void loginHorilla(){
+    public void Recruitments(){
 
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    recruitment =new Recruitment(driver);
+    loginPage.loginApplication();
+    String toastMessage= recruitment.recruitmentAdd();
 
-   loginPage.loginApplication();
-
-
-
-
-
+    Assert.assertEquals(toastMessage,"Recruitment added.");
 
 }
 @Test
-
-
     public void checkIned() throws InterruptedException {
 
    // loginPage.loginApplication();
