@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Horilla Test Suite">
+    <listeners>
+        <listener class-name="horilla.TestObjects.Listeners"></listener>
+    </listeners>
+    <test verbose="1" parallel="false" preserve-order="true" name="Sequential Execution">
+
+
+    <classes>
+
+        <class name="horilla.tests.LeaveWorkflow">
+            <methods><include name="LeaveSubmission"/></methods>
+        </class>
+    </classes></test></suite>

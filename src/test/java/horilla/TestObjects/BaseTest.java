@@ -1,6 +1,7 @@
 package horilla.TestObjects;
 
 import horilla.abstracts.AbstractComponents;
+import horilla.pageObjects.Leave;
 import horilla.pageObjects.LoginPage;
 import horilla.pageObjects.Recruitment;
 import org.apache.commons.io.FileUtils;
@@ -14,7 +15,6 @@ import org.testng.annotations.BeforeMethod;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -24,6 +24,7 @@ public class BaseTest {
     public LoginPage loginPage;
     public AbstractComponents abstractComponents;
     public Recruitment recruitment;
+    public Leave leave;
 
     public WebDriver initializeDriver() throws IOException {
 

@@ -21,7 +21,7 @@ public class NewRecruitment extends BaseTest {
     loginPage.loginApplication();
     String toastMessage= recruitment.recruitmentAdd();
 
-    Assert.assertEquals(toastMessage,"Recruitment added.");
+    Assert.assertEquals(toastMessage,"Test Recruitment added.");
 
 }
 @Test
